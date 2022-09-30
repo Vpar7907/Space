@@ -4,10 +4,10 @@ import { editTodo } from "../store/features/todo/todoSlice";
 import CloseButton from "./UI/CloseButton";
 import TaskDisplayMenu from "./TaskDisplayMenu";
 import TaskDisplayMain from "./TaskDisplayMain";
-
+import { Routes, Route } from "react-router-dom";
 import TaskDisplayComments from "./TaskDisplayComments";
 import TaskDisplayTimer from "./TaskDisplayTimer";
-
+import ErrorPage from "./ErorrPage";
 
 export default function TaskDisplay(props: any) {
   const dispatch = useAppDispatch();
@@ -30,7 +30,6 @@ export default function TaskDisplay(props: any) {
       </div>
       <div className="flex">
         <TaskDisplayMenu />
-      <TaskDisplayMain dataTask={dataTask} setDataTask={setDataTask}/>
       </div>
     </div>
   );
