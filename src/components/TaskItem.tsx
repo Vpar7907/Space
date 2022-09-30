@@ -9,6 +9,7 @@ import {
 import jpg from "../icons/deleteLogo.jpg";
 import star from "../icons/star.png";
 import starActive from "../icons/starActive.png";
+import { Link } from "react-router-dom";
 
 interface Props {
   desk: IDesk | null;
@@ -41,6 +42,7 @@ function TaskItem({ desk, handleSelect, select, type }: Props) {
             >
               {data.title}
             </span>
+
             <div className="flex justify-around">
               <img
                 src={!data.favourite ? star : starActive}

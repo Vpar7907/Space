@@ -10,8 +10,6 @@ import { useAppDispatch } from "../hooks/reduxHooks";
 import { deskWasDeleted } from "../store/features/todo/todoSlice";
 import Favourites from "./Favourites";
 
-
-
 export default function Task() {
   const [desk, setDesk] = useState([
     {
@@ -75,8 +73,6 @@ export default function Task() {
     setSelectTodo(select);
   };
 
-  
-
   return (
     <div className="flex mt-0 ">
       <div className="flex flex-nowrap items-center mx-auto content-center overflow-y-auto ">
@@ -119,7 +115,7 @@ export default function Task() {
           selectTodo ? (
             <ModalWindow close={handleClose}>
               <TaskWindow width={"600px"} height={"430px"}>
-              <TaskDisplay select={selectTodo} handleSelect={handleSelect} />
+                <TaskDisplay select={selectTodo} handleSelect={handleSelect} />
               </TaskWindow>
             </ModalWindow>
           ) : null
